@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  
+  - repo: https://github.com/PyCQA/pylint
+    rev: v3.11.1
+    hooks:
+      - id: pylint
+        args: ["--disable=C0114"]
+        args: ["--max-line-length=99"]

@@ -1,0 +1,6 @@
+[flake8]
+max-line-length = 99
+
+#radon
+# Maximum cyclomatic complexity allowed by radon
+radon-max-cc = 10
