@@ -62,6 +62,7 @@ def calculate_something(param1, param2, param3, param4, param5):
     return result
 
 
+# add some comments
 if __name__ == "__main__":
     try:
         print(divide(10, 2))
