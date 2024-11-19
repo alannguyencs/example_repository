@@ -12,3 +12,9 @@ repos:
     hooks:
       - id: pylint
         args: ["--disable=C0114", "--max-line-length=99"]
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        args: ["--max-line-length=99", "--radon-max-cc=10"]
