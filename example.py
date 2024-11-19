@@ -12,3 +12,7 @@ def add_numbers(num1: float, num2: float) -> float:
         float: Sum of the two numbers
     """
     return num1 + num2
+
+
+if __name__ == "__main__":
+    print(add_numbers(1, 2))
