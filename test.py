@@ -31,9 +31,12 @@ def date_to_string(year: int, month: int, day: int):
     Returns:
         str: Formatted date string (e.g., 'Monday January, 1 2024')
     """
-    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    months = ['January', 'February', 'March', 'April', 'May', 'June',
-              'July', 'August', 'September', 'October', 'November', 'December']
+    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+            'Saturday', 'Sunday']
+    months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ]
 
     day_name = days[datetime.date(year, month, day).weekday()]
     month_name = months[month - 1]  # Subtract 1 since months list is 0-indexed
