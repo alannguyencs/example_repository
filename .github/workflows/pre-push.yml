@@ -1,4 +1,4 @@
-name: Pre-commit
+name: Pre-push
 
 on: [push]
 
@@ -18,3 +18,7 @@ jobs:
             - name: Analysing code with pylint and flake8
               run: |
                 pre-commit run --all-files
+            - name: Run tests
+              run: |
+                pip install pytest
+                python -m unittest discover -s tests
