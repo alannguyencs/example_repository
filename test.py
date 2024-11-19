@@ -2,12 +2,12 @@
 import datetime
 
 
-def divide(a: float, b: float) -> float:
+def divide(numerator: float, denominator: float) -> float:
     """Divide first number by second number.
 
     Args:
-        a (float): Numerator
-        b (float): Denominator
+        numerator (float): Numerator
+        denominator (float): Denominator
 
     Returns:
         float: Result of division
@@ -15,9 +15,9 @@ def divide(a: float, b: float) -> float:
     Raises:
         ZeroDivisionError: If denominator is zero
     """
-    if b == 0:
+    if denominator == 0:
         raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
+    return numerator / denominator
 
 
 def date_to_string(year: int, month: int, day: int):
@@ -32,18 +32,35 @@ def date_to_string(year: int, month: int, day: int):
         str: Formatted date string (e.g., 'Monday January, 1 2024')
     """
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 
+    months = ['January', 'February', 'March', 'April', 'May', 'June',
               'July', 'August', 'September', 'October', 'November', 'December']
-    
+
     day_name = days[datetime.date(year, month, day).weekday()]
     month_name = months[month - 1]  # Subtract 1 since months list is 0-indexed
-    
+
     return f"{day_name} {month_name}, {day} {year}"
 
-def calculate_something_with_a_very_long_name(parameter1, parameter2, parameter3, parameter4, parameter5):    
-    # This line is over 99 characters and has trailing whitespace    
-    result = parameter1 * parameter2 + parameter3 * parameter4 + parameter5 * (parameter1 + parameter2 + parameter3)    
+
+def calculate_something(param1, param2, param3, param4, param5):
+    """Calculate result using the given parameters.
+
+    Args:
+        param1: First parameter
+        param2: Second parameter
+        param3: Third parameter
+        param4: Fourth parameter
+        param5: Fifth parameter
+
+    Returns:
+        Result of calculation
+    """
+    result = (
+        param1 * param2
+        + param3 * param4
+        + param5 * (param1 + param2 + param3)
+    )
     return result
+
 
 if __name__ == "__main__":
     try:
